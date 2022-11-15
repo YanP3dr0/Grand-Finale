@@ -27,11 +27,12 @@
             </ul>
         </nav>
         <a href="" class="entrar__link">
-            <button>Login</button>
+            <button class="login">Login</button>
         </a>
     </header>
 
     <main>
+
         <section class="main__container">
             <div class="form-image">
                 <img src="img/undraw_credit_card_re_blml.svg" alt="Cartão Bancário">
@@ -49,32 +50,32 @@
 
                         <div class="input-box">
                             <label for="txtNome"></label>
-                            <input id="txtNome" name="txtNome" type="text" placeholder="*Nome" maxlength="100" autocomplete="off" required>
+                            <input id="txtNome" name="txtNome" type="text" placeholder="*Nome" maxlength="100" size="25" autocomplete="off">
                         </div>
 
                         <div class="input-box">
                             <label for="txtCpf"></label>
-                            <input id="txtCpf" name="txtCpf" type="text" placeholder="*CPF" maxlength="14" autocomplete="off" required>
+                            <input id="txtCpf" name="txtCpf" type="text" placeholder="*CPF" maxlength="14" autocomplete="off">
                         </div>
 
                         <div class="input-box">
                             <label for="txtEmail"></label>
-                            <input id="txtEmail" name="txtEmail" type="email" placeholder="*E-mail" required autocomplete="on" maxlength="40">
+                            <input id="txtEmail" name="txtEmail" type="email" placeholder="*E-mail" autocomplete="on" maxlength="40" size="25">
                         </div>
 
                         <div class="input-box">
                             <label for="txtDataNascimento"></label>
-                            <input id="txtDataNascimento" name="txtDataNascimento" type="text" maxlength="10" placeholder="*Data de nascimento" autocomplete="on" required>
+                            <input id="txtDataNascimento" name="txtDataNascimento" type="text" size="20" maxlength="10" placeholder="*Data de nascimento" autocomplete="on">
                         </div>
 
                         <div class="input-box">
                             <label for="txtSenha"></label>
-                            <input type="password" id="txtSenha" name="txtSenha" placeholder="*Crie sua Senha" required maxlength="12" autocomplete="off">
+                            <input type="password" id="txtSenha" name="txtSenha" placeholder="*Crie sua Senha" size="25" maxlength="12" autocomplete="off">
                         </div>
                         
                         <div class="input-box">
                             <label for="txtConfirmarSenha"></label>
-                            <input type="password" id="txtConfirmarSenha" name="txtConfirmarSenha" placeholder="*Confirme sua Senha" required maxlength="12" autocomplete="off">
+                            <input type="password" id="txtConfirmarSenha" name="txtConfirmarSenha" placeholder="*Confirme sua Senha" size="20" maxlength="12" autocomplete="off">
                         </div>
 
                         <div class="gender-group">
@@ -103,11 +104,11 @@
                         <a href="#" class="button-continue">
                             <button>Cadastrar</button>
                         </a>
-
                     </div>
                 </form>
             </div>
         </section>
     </main>
+    <script src="cadastro.js"></script>
 </body>
 </html>
