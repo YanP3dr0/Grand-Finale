@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faça seu Cadastro - Seu Dinheiro, nosso Compromisso</title>
+    <title>Abrir Conta - Seu Dinheiro, nosso Compromisso</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="/css/cadastro.css">
 </head>
 <body>
+
     <header>
             <h1 class="logo"><img src="img/Smart_Money-removebg-preview.png" width="200px" alt="Logo da SmartMoney"></h1>
         </div>
         <nav>
             <ul class="nav__links">
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="#">Home</a>
                 </li>
                 <li>
-                    <a href="#">Serviços</a>
+                    <a href="#">Conta</a>
                 </li>
                 <li>
                     <a href="#">Sobre</a>
@@ -29,23 +30,84 @@
             <button>Login</button>
         </a>
     </header>
-    <main class="form__cadastro">
-        <form action="">
-            <h2>
-                <div class="texto__principal">Cadastrar no SmartMoney </div>
-            </h2>
-            <section class="container__main">
-                <div>
-                    <input type="text" id="text" placeholder="Digite seu nome completo"></input>
-                </div>
-                <div>
-                    <input type="email" id="email" placeholder="email@email.com"></input>
-                </div>
-                <div>
-                    <input type="password" id="password" placeholder="Crie uma senha de até 8 caracteres"></input>
-                </div>
-            </section>
-        </form>
+
+    <main>
+        <section class="main__container">
+            <div class="form-image">
+                <img src="img/undraw_credit_card_re_blml.svg" alt="Cartão Bancário">
+            </div>
+
+            <div class="form">
+                <form action="#">
+                    <div class="form__header">
+                        <div class="title">
+                            <h2>Abrir Conta</h2>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+
+                        <div class="input-box">
+                            <label for="txtNome"></label>
+                            <input id="txtNome" name="txtNome" type="text" placeholder="*Nome" maxlength="100" autocomplete="off" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="txtCpf"></label>
+                            <input id="txtCpf" name="txtCpf" type="text" placeholder="*CPF" maxlength="14" autocomplete="off" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="txtEmail"></label>
+                            <input id="txtEmail" name="txtEmail" type="email" placeholder="*E-mail" required autocomplete="on" maxlength="40">
+                        </div>
+
+                        <div class="input-box">
+                            <label for="txtDataNascimento"></label>
+                            <input id="txtDataNascimento" name="txtDataNascimento" type="text" maxlength="10" placeholder="*Data de nascimento" autocomplete="on" required>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="txtSenha"></label>
+                            <input type="password" id="txtSenha" name="txtSenha" placeholder="*Crie sua Senha" required maxlength="12" autocomplete="off">
+                        </div>
+                        
+                        <div class="input-box">
+                            <label for="txtConfirmarSenha"></label>
+                            <input type="password" id="txtConfirmarSenha" name="txtConfirmarSenha" placeholder="*Confirme sua Senha" required maxlength="12" autocomplete="off">
+                        </div>
+
+                        <div class="gender-group">
+                            <div class="gender-input">
+                                <input type="radio" name="gender" id="female" value="Feminino">
+                                <label for="Female">Feminino</label>
+                            </div>
+
+                            <div class="gender-input">
+                                <input type="radio" name="gender" id="male" value="Masculino">
+                                <label for="male">Masculino</label>
+                            </div>
+
+                            <div class="gender-input">
+                                <input type="radio" name="gender" id="outros" value="Outros">
+                                <label for="outros">Outros</label>
+                            </div>
+
+                            <div class="gender-input">
+                                <input type="radio" name="gender" id="notPrefer" value="Prefiro não dizer">
+                                <label for="notPrefer">Prefiro não dizer</label>
+                            </div>
+
+                        </div>
+
+                        <a href="#" class="button-continue">
+                            <button>Cadastrar</button>
+                        </a>
+
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
 </body>
 </html>

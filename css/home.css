@@ -7,8 +7,8 @@
 }
 
 body {
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100vh;
     background-color: #5B48D4 ;
 }
 
