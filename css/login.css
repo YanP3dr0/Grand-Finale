@@ -45,7 +45,7 @@ img {
     border-radius:  20px;
 }
 
-.cpf input {
+.email input {
     margin-top: 1.5rem;
     border: none;
     border-radius: 5px;
@@ -53,19 +53,19 @@ img {
     box-shadow: 1px 1px 6px #00001c;
 }
 
-.cpf input:focus-visible, .senha input:focus-visible {
+.email input:focus-visible, .senha input:focus-visible {
     outline: 1px solid #5B48D4;
 }
 
 
-.cpf input::placeholder, .senha input::placeholder {
+.email input::placeholder, .senha input::placeholder {
     padding-left: 0.1rem;
     color: #000000be;
     font-size: 0.7rem;
     font-weight: 500;
 }
 
-.cpf input:hover, .senha input:hover {
+.email input:hover, .senha input:hover {
     background-color: #f3f3f8fd;
 }
 

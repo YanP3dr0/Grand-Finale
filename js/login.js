@@ -1,16 +1,16 @@
-// Máscara para CPF
-const cpf = document.querySelector('#txt_Cpf')
+// // Máscara para CPF
+// const cpf = document.querySelector('#txt_Cpf')
 
-cpf.addEventListener('keypress', () => {
-    let cpflength = cpf.value.length
-    console.log(cpflength)
+// cpf.addEventListener('keypress', () => {
+//     let cpflength = cpf.value.length
+//     console.log(cpflength)
 
-    if (cpflength === 3 || cpflength === 7) {
-        cpf.value += '.'
-    } else if (cpflength === 11) {
-        cpf.value += '-'
-    }
-})
+//     if (cpflength === 3 || cpflength === 7) {
+//         cpf.value += '.'
+//     } else if (cpflength === 11) {
+//         cpf.value += '-'
+//     }
+// })
 
 // Mostrar Senha
 const passwordInput = document.getElementById('txt_Senha')
