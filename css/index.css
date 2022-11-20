@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Roboto:wght@700&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    background-color: #5B48D4 ;
+}
+
+.container__header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 200px;
+}
+
+.container__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 1024px;
+    height: 300px;
+
+    border-radius: 45px;
+    box-shadow: 2px 3px 3px 5px rgba(43, 41, 41, 0.15);
+    
+    text-align: center;
+    background-color: #d2ccf8;
+}
+
+#chamada {
+    font-family: "MontSerrat", "sans-serif";
+    color: #1a1919;
+    font-weight: 800;
+    font-size: 32px;
+    padding-top: 40px;
+}
+
+.pitch__1 {
+    padding-top: 40px;
+    font-family: "MontSerrat",
+     "sans-serif";
+    color: #2D2D2D;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.pitch__2 {
+    padding-top: 10px;
+    font-family: "MontSerrat",
+     "sans-serif";
+    color: #2D2D2D;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50px;
+}
+
+.login__btn {
+    width: 280px;
+    height: 50px;
+
+    transition: all 0.3s ease 0s;
+    background: #5B48D4;
+    border-radius: 20px;
+    border: 2px solid #f7f7f7;
+    filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.25));
+    color: white;
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'MontSerrat',
+    "sans-serif";
+}
+
+.login__btn:hover {
+    background-color: rgba(37, 0, 169, 0.8);
+    font-weight: bold;
+}
+
+.cadastrar__btn {
+    width: 280px;
+    height: 50px;
+    
+    transition: all 0.3s ease 0s;
+    background: #fffafabb;
+    border-radius: 20px;
+    border: 2px solid #5B48D4;
+    filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.25));
+    color: #5B48D4;
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'MontSerrat',
+    "sans-serif";
+}
+
+.cadastrar__btn:hover {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #5B48D4;
+    font-weight: bold;
+}
+
+.rodape {
+    margin-top: 65px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 300;
+    font-family: 'MontSerrat',
+    "sans-serif";
+    color: rgba(240, 255, 255, 0.644);
+}
+
+@media (max-width: 480px) {
+    
+    body {
+        width: 100%;
+        height: auto;
+    }
+
+    .container__header {
+        max-height: 9rem;
+    }
+
+    .logo img {
+        margin-top: 1rem;
+        width: 200px;
+    }
+
+    .box {
+      margin-top: 1rem;
+      width: 90%;
+      height: 18.5rem;
+    }
+
+    #chamada {
+        font-size: 1.2rem;
+    }
+
+    .pitch__1 {
+    padding-top: 1.4rem;
+    font-family: "MontSerrat",
+     "sans-serif";
+    color: #2D2D2D;
+    font-weight: 500;
+    font-size: 1rem;
+    }
+
+    .pitch__2 {
+        padding-top: 1.6rem;
+        font-family: "MontSerrat",
+         "sans-serif";
+        color: #2D2D2D;
+        font-weight: 500;
+        font-size: 1rem;
+        }
+
+    .buttons {
+        padding-top: 1.2rem;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .login__btn {
+        width: 225px;
+        height: 40px;
+        filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .cadastrar__btn {
+        margin-top: 0.95rem;
+        width: 225px;
+        height: 40px;
+        filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .rodape {
+        display: flex;
+        margin-top: 2.8rem;
+        font-size: 0.65rem;
+    }
+}   
+
+@media (max-width: 390px) {
+   .container__header {
+    max-height: 7rem;
+   }
+
+   .logo img {
+    margin-top: 1.5rem;
+   }
+   
+   .box {
+    height: 19rem;
+   }
+
+   #chamada {
+    font-size: 1.1rem;
+   }
+
+
+   .pitch__1 {
+    font-size: 0.95rem;
+   }
+
+   .pitch__2 {
+    font-size: 0.9rem;
+   }
+
+}
+
+   @media (min-width: 768px) and (max-width: 900px) {
+
+    body {
+        width: 100%;
+        height: auto;
+    }
+
+    .container__header {
+        max-height: 10rem;
+    }
+
+    .logo img {
+        width: 250px;
+    }
+
+    .box {
+        width: 90%;
+    }
+
+    #chamada {
+        font-size: 2rem;
+    }
+    
+    .pitch__1 {
+    font-size: 1.15rem;
+    }
+
+    .pitch__2 {
+    margin-top: 0.85rem;
+    font-size: 1.1rem;
+    }
+
+    section {
+        margin-top: 0;
+    }
+
+    .login__btn {
+        width: 250px;
+        height: 45px;
+        filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .cadastrar__btn {
+        width: 250px;
+        height: 45px;
+        filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .rodape {
+        margin-top: 2.2rem;
+    }
+
+}   
+
+    @media (min-width: 900px) and (max-width: 1268px) {
+
+    body {
+        width: 100%;
+        height: auto;
+    }
+
+    .container__header {
+        max-height: 10rem;
+    }
+
+    .logo img {
+        width: 250px;
+    }
+
+    .box {
+        width: 90%;
+    }
+
+    #chamada {
+        font-size: 2.5rem;
+    }
+    
+    .pitch__1 {
+        font-size: 1.25rem;
+    }
+
+    .pitch__2 {
+        margin-top: 0.85rem;
+        font-size: 1.25rem;
+    }
+
+    .buttons {
+        margin-top: 0;
+    }
+
+    .login__btn {
+        width: 280px;
+        height: 50px;
+        filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .cadastrar__btn {
+        width: 280px;
+        height: 50px;
+        filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.1));
+    }
+
+    .rodape {
+        margin-top: 2.2rem;
+    }
+}

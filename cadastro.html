@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abrir Conta - Seu Dinheiro, nosso Compromisso</title>
+    <title>Criar Conta - Seu Dinheiro, nosso Compromisso</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="/css/cadastro.css">
+    <link rel="stylesheet" href="css/cadastro.css">
 </head>
 <body>
 
     <header>
-            <h1 class="logo"><img src="img/Smart_Money-removebg-preview.png" width="200px" alt="Logo da SmartMoney"></h1>
+            <h1 class="logo"><a href="index.html"><img src="img/Smart_Money-removebg-preview.png" width="200px" alt="Logo da SmartMoney"></a></h1>
         </div>
         <nav>
             <ul class="nav__links">
@@ -26,7 +26,7 @@
                 </li>
             </ul>
         </nav>
-        <a href="" class="entrar__link">
+        <a href="login.html" class="entrar__link">
             <button class="login">Login</button>
         </a>
     </header>
@@ -42,7 +42,7 @@
                 <form action="#">
                     <div class="form__header">
                         <div class="title">
-                            <h2>Abrir Conta</h2>
+                            <h2>Criar Conta</h2>
                         </div>
                     </div>
 
@@ -50,7 +50,7 @@
 
                         <div class="input-box">
                             <label for="txtNome"></label>
-                            <input id="txtNome" name="txtNome" type="text" placeholder="*Nome" maxlength="100" size="25" autocomplete="off">
+                            <input id="txtNome" name="txtNome" type="text" placeholder="*Nome Completo" maxlength="100" size="25" autocomplete="off">
                         </div>
 
                         <div class="input-box">
@@ -70,12 +70,12 @@
 
                         <div class="input-box">
                             <label for="txtSenha"></label>
-                            <input type="password" id="txtSenha" name="txtSenha" placeholder="*Crie sua Senha" size="25" maxlength="12" autocomplete="off">
+                            <input type="password" id="txtSenha" name="txtSenha" placeholder="*Crie sua Senha  (Máx. 6 dígitos)" size="25" maxlength="6" autocomplete="off">
                         </div>
                         
                         <div class="input-box">
                             <label for="txtConfirmarSenha"></label>
-                            <input type="password" id="txtConfirmarSenha" name="txtConfirmarSenha" placeholder="*Confirme sua Senha" size="20" maxlength="12" autocomplete="off">
+                            <input type="password" id="txtConfirmarSenha" name="txtConfirmarSenha" placeholder="*Confirme sua Senha" size="20" maxlength="6" autocomplete="off">
                         </div>
 
                         <div class="gender-group">
@@ -109,6 +109,6 @@
             </div>
         </section>
     </main>
-    <script src="cadastro.js"></script>
+    <script src="js/cadastro.js"></script>
 </body>
 </html>
