@@ -47,7 +47,7 @@
             </div>
 
             <div class="form">
-                <form action="cadastro" method="post">
+                <form action="cadastro?acao=cadastrar" method="post">
                     <div class="form__header">
                         <div class="title">
                             <h2>Abrir Conta</h2>

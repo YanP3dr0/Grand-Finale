@@ -25,6 +25,12 @@ public class LoginServlet extends HttpServlet {
 		super.init();
 		dao = DaoFactory.getUsuarioDao();
 	}
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		session.invalidate();
+		request.getRequestDispatcher("index.jsp").forward(request, response);
+	}
        
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String email = request.getParameter("email");

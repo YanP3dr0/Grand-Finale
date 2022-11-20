@@ -2,7 +2,7 @@ package br.com.fiap.model;
 
 public class Despesa {
 	
-	private int codigoBanco;
+	private int codigo;
 	
 	private int codigoUsuario;
 	
@@ -10,8 +10,8 @@ public class Despesa {
 	
 	private String valorDebito;
 
-	public Despesa(int codigoBanco, int codigoUsuario, String nomeClassificacao, String valorDebito) {
-		this.codigoBanco = codigoBanco;
+	public Despesa(int codigo, int codigoUsuario, String nomeClassificacao, String valorDebito) {
+		this.codigo = codigo;
 		this.codigoUsuario = codigoUsuario;
 		this.classificacao = nomeClassificacao;
 		this.valorDebito = valorDebito;
@@ -26,12 +26,12 @@ public class Despesa {
 	public Despesa() {
 	}
 
-	public int getCodigoBanco() {
-		return codigoBanco;
+	public int getCodigo() {
+		return codigo;
 	}
 
-	public void setCodigoBanco(int codigoBanco) {
-		this.codigoBanco = codigoBanco;
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
 	}
 
 	public int getCodigoUsuario() {
@@ -60,7 +60,7 @@ public class Despesa {
 
 	@Override
 	public String toString() {
-		return "CodigoBanco=" + codigoBanco + ", codigoUsuario=" + codigoUsuario + ", classificacao="
+		return "CodigoBanco=" + codigo + ", codigoUsuario=" + codigoUsuario + ", classificacao="
 				+ classificacao + ", valorDebito=" + valorDebito;
 	}
 	

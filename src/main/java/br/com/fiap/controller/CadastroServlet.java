@@ -27,12 +27,19 @@ public class CadastroServlet extends HttpServlet {
 		dao = DaoFactory.getUsuarioDao();
 	}
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String acao = request.getParameter("acao");
+		
+		switch(acao) {
+		case "cadastrar":
+			cadastrar(request, response);
+			break;
+		}
 		
 	}
 
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	private void cadastrar(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		try {
 			String nome = request.getParameter("nome");
 			String cpf = request.getParameter("cpf");
@@ -48,7 +55,7 @@ public class CadastroServlet extends HttpServlet {
 			e.printStackTrace();
 			request.setAttribute("erro","Por favor, valide os dados");
 		}
-		request.getRequestDispatcher("cadastro.jsp").forward(request, response);		
+		request.getRequestDispatcher("cadastro.jsp").forward(request, response);
 	}
 	
 	

@@ -40,6 +40,55 @@ public class ReceitaDao {
 		
 	}
 	
+	public void atualizar(Receita receita) {
+		
+		PreparedStatement stmt = null;
+		
+		try {
+			conexao = ConnectionManager.getInstance().getConnection();
+			String query = "UPDATE T_SIP_RECEITA SET VL_CREDITO = ?, CD_CLASSIFICACAO = ?, NM_CLASSIFICACAO = ? WHERE CD_RECEITA = ?";
+			stmt = conexao.prepareStatement(query);
+			stmt.setString(1, receita.getValorCredito());
+			stmt.setInt(2, receita.getCodigoClassificacao());
+			stmt.setString(3, receita.getNomeClassificacao());
+			stmt.setInt(4, receita.getCodigoReceita());
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				stmt.close();
+				conexao.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+	
+	public void remover(int codigo) {
+		
+		PreparedStatement stmt = null;
+		
+		try {
+			conexao = ConnectionManager.getInstance().getConnection();
+			String query = "DELETE FROM T_SIP_RECEITA WHERE CD_RECEITA = ?";
+			stmt = conexao.prepareStatement(query);
+			stmt.setInt(1, codigo);
+			stmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				stmt.close();
+				conexao.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+	
 	public List<Receita> listar() {
 	    List<Receita> lista = new ArrayList<>();
 	    PreparedStatement stmt = null;
@@ -47,6 +96,39 @@ public class ReceitaDao {
 	    try {
 	      conexao = ConnectionManager.getInstance().getConnection();
 	      stmt = conexao.prepareStatement("SELECT * FROM T_SIP_RECEITA");
+	   	  rs = stmt.executeQuery();
+	  
+	    while (rs.next()) {
+	    	int codigoReceita = rs.getInt("CD_RECEITA");
+	    	String valorCredito = rs.getString("VL_CREDITO");
+	    	int codigoUsuario = rs.getInt("CD_USUARIO");
+	    	int codigoClassificacao = rs.getInt("CD_CLASSIFICACAO");
+	    	String nomeClassificacao = rs.getString("NM_CLASSIFICACAO");
+	        Receita receita = new Receita(codigoReceita, valorCredito, codigoUsuario, codigoClassificacao, nomeClassificacao);
+	        lista.add(receita);
+	      }
+	    } catch (SQLException e) {
+	      e.printStackTrace();
+	    }finally {
+	      try {
+	        stmt.close();
+	        rs.close();
+	        conexao.close();
+	      } catch (SQLException e) {
+	        e.printStackTrace();
+	      }
+	    }
+	    return lista;
+	  }
+	
+	public List<Receita> listarPorUsuario(int codigoUsuarioBusca) {
+	    List<Receita> lista = new ArrayList<>();
+	    PreparedStatement stmt = null;
+	    ResultSet rs = null;
+	    try {
+	      conexao = ConnectionManager.getInstance().getConnection();
+	      stmt = conexao.prepareStatement("SELECT * FROM T_SIP_RECEITA WHERE CD_USUARIO = ?");
+		  stmt.setInt(1, codigoUsuarioBusca);
 	   	  rs = stmt.executeQuery();
 	  
 	    while (rs.next()) {
