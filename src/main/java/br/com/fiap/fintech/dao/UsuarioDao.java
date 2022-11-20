@@ -108,5 +108,36 @@ public class UsuarioDao {
 	    }
 	    return usuario;
 	}
+	
+	public boolean validaUsuario(String email, String senha) {
+	    PreparedStatement stmt = null;
+	    ResultSet rs = null;
+	    try {
+	      conexao = ConnectionManager.getInstance().getConnection();
+	      stmt = conexao.prepareStatement("SELECT * FROM T_SIP_USUARIO WHERE DS_EMAIL= ?");
+	      stmt.setString(1, email);
+	      rs = stmt.executeQuery();
+	      String senhaCadastrada = "";
+	      
+	      while(rs.next()) {
+	    	  senhaCadastrada = rs.getString("DS_SENHA");
+	      }
+	      if(senha.equals(senhaCadastrada.strip())) {
+	    	  return true;
+	      }
+	      
+	    } catch (SQLException e) {
+	      e.printStackTrace();
+	    }finally {
+	      try {
+	        stmt.close();
+	        rs.close();
+	        conexao.close();
+	      } catch (SQLException e) {
+	        e.printStackTrace();
+	      }
+	    }
+	    return false;
+	}
 
 }

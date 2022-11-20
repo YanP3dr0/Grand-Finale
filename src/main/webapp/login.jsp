@@ -16,20 +16,31 @@
         <h1><a href="index.jsp" rel="_previous"><img src="./resources/img/Smart_Money-removebg-preview.png" alt="Logo da SmartMoney" width="300px"></img></a>
         </h1>
     </header>
+    
+      <c:if test="${not empty msg }">
+        <div class="alert alert-success">
+          ${msg}
+        </div>
+      </c:if>
+      <c:if test="${not empty erro }">
+         <div class="alert alert-danger">${erro}</div>
+     </c:if>
     <main class="container">
         <section class="content">
-            <div class="cpf">
-                <label for="txt_Cpf"></label>
-                <input id="txt_Cpf" name="txt_Cpf" type="text" autocomplete="on" required maxlength="14" placeholder="*CPF">
-            </div>
-            <div class="senha">
-                <label for="txt_Senha"></label>
-                <input type="password" required maxlength="8" placeholder="*Senha">
-            </div>
-                <a href="#" class="button-continue">
-                    <button>Entrar
-                    </button>  
-                </a>
+              <form action="login" method="post">
+                  <div class="email">
+                      <label for="email"></label>
+                      <input id="email" name="email" type="text" autocomplete="on" placeholder="*email">
+                  </div>
+                  <div class="senha">
+                      <label for="senha"></label>
+                      <input name="senha" type="password" required maxlength="8" placeholder="*Senha">
+                  </div>
+                  <a href="#" class="button-continue">
+                      <button>Entrar
+                      </button>  
+                  </a>
+              </form>
                 <h2 class="esqueci_senha">
                     <a href="#">
                         <div>Esqueci minha senha</div>

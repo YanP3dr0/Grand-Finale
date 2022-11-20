@@ -15,6 +15,8 @@ public class TesteListagemUsuario {
 //			System.out.println(usuario.toString());
 //		}
 		Usuario usuario = dao.buscaPorEmail("reinaldo@mail.com");
+		boolean verificado = dao.validaUsuario("reinaldo@mail.com", "2");
+		System.out.println(verificado);
 		System.out.println(usuario.toString());
 	}
 }
