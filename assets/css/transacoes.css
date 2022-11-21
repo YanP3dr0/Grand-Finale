@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Roboto:wght@700&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    max-height: 7rem;
+    background: linear-gradient(180deg, #5B48D5 100.54%, rgba(91, 72, 213, 0) 85.42%);
+    position: relative;
+}
+
+.logout{
+    position: absolute;
+}
+
+.logout img {
+    width: 1.2rem;
+}
+
+.logout__Text {
+    position: absolute;
+    margin-top: .2rem;
+    font-size: 1rem;
+}
+
+.logo {
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-flex;
+    padding: 0px 20px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+    color: #edf0f1;
+}
+
+.nav__links li a:hover {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background: #24252A;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.content {
+    margin-top: 2.1rem;
+    background: linear-gradient(180deg, #755ADF 0%, rgba(56, 84, 232, 0.394118) 99.85%, rgba(22, 18, 220, 0) 90.1%);
+    width: 90%;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    box-shadow: 1px 1px 6px #00001c;
+    border-radius:  20px;
+}
+
+.titulo_Principal {
+    margin-top: 2rem;
+    font-weight: 700;
+    color: beige;
+    font-size: 1.8rem;
+}
+
+.table_container {
+    margin-top: 1rem;
+    width: 90%;
+    height: 80%;
+}
+
+.teste {
+    height: auto;
+    width: auto;
+}
+
+.coluna1_, .coluna2_ {
+    background: transparent;
+}
+
+.coluna1 {
+    padding: .6rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #edf0f1;
+}
+
+.coluna1_ {
+    padding-left: .5rem;
+    font-size: 1.05rem;
+    color: #edf0f1;
+}
+
+.coluna2 {
+    padding-left: 15rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #edf0f1;
+}
+
+.coluna2_ {
+    padding-left: 15rem;
+    font-size: 1.05rem;
+    color: #edf0f1;
+}
+
+.button-excluir {
+    margin-left: 7rem;
+    margin-top: 1.4rem;
+    padding: 0.1rem 1.5rem;
+    background: #30218d;
+    color: #edf0f1;
+    border: 2px solid #5B48D4;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-size: 1rem;
+}
+
+.button-excluir:hover {
+    background-color: rgba(37, 0, 169, 0.8);
+    font-weight: 700;
+}
+
+.button-excluir:active {
+    background-color: rgba(146, 240, 146, 0.489);
+    border: none;
+}
+
