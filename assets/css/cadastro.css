@@ -13,6 +13,21 @@ header {
     padding: 30px 10%;
     max-height: 7rem;
     background: linear-gradient(180deg, #5B48D5 100.54%, rgba(91, 72, 213, 0) 85.42%);
+    position: relative;
+}
+
+.logout{
+    position: absolute;
+}
+
+.logout img {
+    width: 1.2rem;
+}
+
+.logout__Text {
+    position: absolute;
+    margin-top: .2rem;
+    font-size: 1rem;
 }
 
 .logo {

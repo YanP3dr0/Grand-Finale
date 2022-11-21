@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | SmartMoney</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/home.css">
+
+</head>
+<body>
+    <header class="o-header">
+
+            <h1 class="logo"><a href="../index.html" rel="_previous" target="_parent"><img src="img/Smart_Money-removebg-preview.png" width="200px" alt="Logo da SmartMoney"></a></h1>
+        </div>
+        <nav>
+            <ul class="nav__links">
+                <li>
+                    <a href="../assets/home.html">Home</a>
+                </li>
+                <li>
+                    <a href="cadastro.html">Conta</a>
+                </li>
+                <li class="logout">
+                    <a href=""><img src="img/Logout.svg" alt=""></img>  <span class="logout__Text">Logout</span></a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <aside class="o-aside">
+
+        <div class="container__aside">
+            <div class="content__aside">
+                <div class="content__aside___titulo">
+                  Transações
+                </div>
+
+                <div class="content__aside__categorias">
+                    <form action="#">
+                        <ul>
+                            <div class="content__aside___despesas">
+                                <li>
+                                    <!-- <img src="img/alimentacao.svg" alt="">
+                                   <label for="txt_food__d">Alimentação
+                                </label> -->
+                                <label for=""></label>
+                                <label for=""></label>
+                                <div><input type="text" class="valor_transacoes" id="" placeholder="Descrição" ></div>
+                                </li>
+                            </div>
+                            <div class="content__aside___despesas">
+                                <li>
+                                    <div><input type="text" class="valor_transacoes" onkeypress="$(this).mask('R$ #.##0.##0,00', {reverse: true});" placeholder="Valor: R$"></div>
+                                </li>
+                            </div>
+                            <div class="content__aside___btn">
+                                <a href="#"><button class="btn__despesas">Criar Despesa</button></a>
+                            </div>
+                        </form>
+
+                        <div class="content__aside___btn___VerTodos">
+                            <a href="#"><button class="btn__excluir">Ver Todos</button></a>
+                        </div>
+
+                        <form action="##">
+                            <div class="content__aside___despesas">
+                                <li>
+                                    <div><input type="text" class="valor_transacoes"  placeholder="Descrição" ></div>
+                                </li>
+                            </div>
+                            <div class="content__aside___receitas">
+                                <li>
+                                    <div><input type="text" class="valor_transacoes" onkeypress="$(this).mask('R$ #.##0.##0,00', {reverse: true});"placeholder="Valor: R$"></div>
+                                </li>
+                            </div>
+                            <div class="content__aside___btn">
+                                <a href="#"><button class="btn__receitas">Criar Receita</button></a>
+                            </div>
+                        </form>
+
+                        <div class="content__aside___btn___VerTodos">
+                            <a href="#"><button class="btn__excluir">Ver Todos</button></a>
+                        </div>
+
+                    </ul>
+                </div>
+                
+    </aside>
+    <main class="o-main">
+        <section class="show_Saldo">
+            <div class="saldo_User">
+                <div class="boas__vindas">
+                    <img src="img/user.svg" alt="">
+                    Olá, <br>Bem-vindo novamente!</br>
+                </div>
+                <div class="saldo">
+                    Saldo Geral
+                    <input type="text" class="saldo_conta" onkeypress="$(this).mask('R$ #.##0.##0,00', {reverse: true});">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="teste">
+                <div class="container_forms">
+                    <div class="o-ContaBancaria">
+                        <div class="cad__ContaBancaria___Titulo">
+                            Registrar Conta
+                        </div>
+                        
+                        <div class="form_Conta">
+                            <form action="">
+                                <div class="conatiner_Conta">
+
+                                    <div class="conta__inputs">
+                                        <label for="numero_Agencia">
+                                            <input type="text" placeholder="Agência" id="numero_Agencia" autofocus>
+                                        </label>
+                                    </div>
+
+                                    <div class="conta__inputs">
+                                        <label for="">
+                                            <input type="text" placeholder="Nº da Conta">
+                                        </label>
+                                    </div>
+
+                                    <div class="conta__inputs">
+                                        <label for=""></label>
+                                            <input type="text" placeholder="Saldo">
+                                        </label>
+                                    </div>
+
+                                    <div class="conta__main___btn">
+                                        <a href="#"><button class="btn__despesas">Criar Despesa</button></a>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                                    <div class="content__aside___btn___VerTodos">
+                                        <a href="#"><button class="btn__excluir">Ver Mais</button></a>
+                                    </div>  
+                        </div>
+
+                        <div class="o-Investimentos">
+                            <div class="cad__Investimentos___Titulo">
+                               Novo Investimento
+                            </div>
+
+                            <div class="form_Investimentos">
+                                <form action="">
+                                   <div class="container_Investimentos">
+                                       <div class="investimentos__inputs">
+                                           <label for="">
+                                               <input type="text" placeholder="Data da Transação">
+                                           </label>
+                                       </div>
+
+                                       <div class="investimentos__inputs">
+                                           <label for="">
+                                               <input type="text" placeholder="Valor da Aplicação">
+                                           </label>
+                                       </div>
+
+                                       <div class="investimentos__inputs">
+                                           <label for="">
+                                               <input type="text" placeholder="Valor Resgate">
+                                           </label>
+                                       </div>
+
+                                       <div class="investimentos__inputs">
+                                           <label for="">
+                                               <input type="text" placeholder="Valor Rendimento">
+                                           </label>
+                                       </div>
+
+                                       <div class="investimentos__inputs">
+                                           <label for="">
+                                               <input type="text" placeholder="Valor IR">
+                                           </label>
+                                       </div>
+
+                                       <div class="investimentos__inputs">
+                                           <label for="">
+                                               <input type="text" placeholder="Valor IOF">
+                                           </label>
+                                       </div>
+
+                                       <div class="conta__main___btn">
+                                            <a href="#"><button class="btn__despesas">Criar Despesa</button></a>
+                                        </div>
+
+                                    </div>
+                                </form>
+
+                                        <div class="content__aside___btn___VerTodos">
+                                            <a href="#"><button class="btn__excluir">Ver Mais</button></a>
+                                        </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    <footer class="o-footer"></footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+</html>
