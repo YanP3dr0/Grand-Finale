@@ -12,6 +12,7 @@ public class TesteListagemInvestimento {
 		List<Investimento> lista = dao.listarPorUsuario(29);
 		for (Investimento usuario : lista) {
 			System.out.println(usuario.toString());
+			System.out.println(usuario.getDataTransacao());
 		}
 	}
 }

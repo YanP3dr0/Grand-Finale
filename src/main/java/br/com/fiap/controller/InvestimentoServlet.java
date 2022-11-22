@@ -3,15 +3,18 @@ package br.com.fiap.controller;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import br.com.fiap.factory.DaoFactory;
 import br.com.fiap.fintech.dao.InvestimentoDao;
+import br.com.fiap.model.ContaBancaria;
 import br.com.fiap.model.Investimento;
 
 
@@ -30,8 +33,16 @@ public class InvestimentoServlet extends HttpServlet {
       
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String acao = request.getParameter("acao");
+		
+		switch(acao) {
+		case "consulta":
+			consulta(request, response);
+			break;
+		case "exclui":
+			exclui(request, response);
+			break;
+		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -43,6 +54,24 @@ public class InvestimentoServlet extends HttpServlet {
 			break;
 		}
 		
+	}
+	
+	private void exclui(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		int codigo = Integer.parseInt(request.getParameter("codigo"));
+		dao.remover(codigo);
+		request.setAttribute("msg", "Removido!");
+		consulta(request,response);
+	}
+
+
+	private void consulta(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		int userId = Integer.parseInt(session.getAttribute("userId").toString());
+		List<Investimento> investimentos = dao.listarPorUsuario(userId);
+	    request.setAttribute("investimentos", investimentos);
+	    request.getRequestDispatcher("investimentos.jsp").forward(request, response);
 	}
 
 	private void cadastrar(HttpServletRequest request, HttpServletResponse response)

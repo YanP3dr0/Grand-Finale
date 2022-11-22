@@ -35,11 +35,11 @@ public class ContaBancaria {
 		this.saldo = saldo;
 	}
 
-	public int getCodigo() {
+	public int getCodigoBanco() {
 		return codigoBanco;
 	}
 
-	public void setCodigo(int codigo) {
+	public void setCodigoBanco(int codigo) {
 		this.codigoBanco = codigo;
 	}
 

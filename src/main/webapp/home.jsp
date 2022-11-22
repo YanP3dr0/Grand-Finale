@@ -3,12 +3,11 @@
         <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="ISO-8859-1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | SmartMoney</title>
     <%@ include file="header.jsp" %>
-    <link rel="stylesheet" href="resources/css/reset.css">
     <link rel="stylesheet" href="resources/css/home.css">
 
 </head>
@@ -20,19 +19,19 @@
         <nav>
             <ul class="nav__links">
                 <li>
-                    <a href="../assets/home.html">Home</a>
+                    <a href="home.jsp">Home</a>
                 </li>
                 <li>
-                    <a href="contas.html" rel="_next" target="_self">Contas</a>
+                    <a href="conta?&acao=consulta" rel="_next" target="_self">Contas</a>
                 </li>
                 <li>
-                    <a href="receitas.html" rel="_next" target="_self">Receitas</a>
+                    <a href="receita?&acao=consulta" rel="_next" target="_self">Receitas</a>
                 </li>
                 <li>
-                    <a href="despesas.html" rel="_next" target="_self">Despesas</a>
+                    <a href="despesa?&acao=consulta" rel="_next" target="_self">Despesas</a>
                 </li>
                 <li>
-                    <a href="investimentos.html" rel="_next" target="_self">Investimentos</a>
+                    <a href="investimento?&acao=consulta" rel="_next" target="_self">Investimentos</a>
                 </li>
                 <li class="logout">
                     <a href=""><img src="./resources/img/Logout.svg" alt=""></img>  <span class="logout__Text">Logout</span></a>
@@ -52,7 +51,7 @@
         <div class="container__aside">
             <div class="content__aside">
                 <div class="content__aside___titulo">
-                  TransaÃ§Ãµes
+                  Transações
                 </div>
 
                 <div class="content__aside__categorias">
@@ -66,7 +65,7 @@
                                 </label> -->
                                 <label for=""></label>
                                 <label for=""></label>
-                                <div><input name="descricao" type="text" class="valor_transacoes" id="" placeholder="DescriÃ§Ã£o" ></div>
+                                <div><input name="descricao" type="text" class="valor_transacoes" id="" placeholder="Descrição" ></div>
                                 </li>
                             </div>
                             <div class="content__aside___despesas">
@@ -77,30 +76,28 @@
                             <div class="content__aside___btn">
                                 <a href="#"><button class="btn__despesas">Criar Despesa</button></a>
                             </div>
-                        </form>
+                    </form>
 
-                        <div class="content__aside___btn___VerTodos">
-                            <a href="cadastro.html">
-                                <button class="btn__excluir">Ver Todos</button>
-                            </a>
+                    <div class="content__aside___btn___VerTodos">
+                        <a href="despesa?&acao=consulta" rel="_next" target="_self"><button class="btn__excluir">Ver Todos</button></a>
+                    </div>
+
+                    <form action="receita?acao=cadastrar" method="post">
+                        <input type="hidden" value="${userId}" name="userId">
+                        <div class="content__aside___despesas">
+                            <li>
+                                <div><input name="descricao" type="text" class="valor_transacoes"  placeholder="Descrição" ></div>
+                            </li>
                         </div>
-
-                        <form action="receita?acao=cadastrar" method="post">
-                            <input type="hidden" value="${userId}" name="userId">
-                            <div class="content__aside___despesas">
-                                <li>
-                                    <div><input name="descricao" type="text" class="valor_transacoes"  placeholder="DescriÃ§Ã£o" ></div>
-                                </li>
-                            </div>
-                            <div class="content__aside___receitas">
-                                <li>
-                                    <div><input name="valor" type="text" class="valor_transacoes" onkeypress="$(this).mask('R$ #.##0.##0,00', {reverse: true});"placeholder="Valor: R$"></div>
-                                </li>
-                            </div>
-                            <div class="content__aside___btn">
-                                <a href="#"><button class="btn__receitas">Criar Receita</button></a>
-                            </div>
-                        </form>
+                        <div class="content__aside___receitas">
+                            <li>
+                                <div><input name="valor" type="text" class="valor_transacoes" onkeypress="$(this).mask('R$ #.##0.##0,00', {reverse: true});"placeholder="Valor: R$"></div>
+                            </li>
+                        </div>
+                        <div class="content__aside___btn">
+                            <a href="#"><button class="btn__receitas">Criar Receita</button></a>
+                        </div>
+                    </form>
 
                         <div class="content__aside___btn___VerTodos">
                             <a href=""><button class="btn__excluir">Ver Todos</button></a>
@@ -115,7 +112,7 @@
             <div class="saldo_User">
                 <div class="boas__vindas">
                     <img src="img/user.svg" alt="">
-                    OlÃ¡, ${user} <br>Bem-vindo novamente!</br>
+                    Olá, ${user} <br>Bem-vindo novamente!</br>
                 </div>
                 <div class="saldo">
                     Saldo Geral
@@ -139,7 +136,7 @@
 
                                     <div class="conta__inputs">
                                         <label for="numero_Agencia">
-                                            <input name ="agencia" type="text" placeholder="AgÃªncia" id="numero_Agencia" autofocus>
+                                            <input name ="agencia" type="text" placeholder="Agência" id="numero_Agencia" autofocus>
                                         </label>
                                     </div>
 
@@ -185,13 +182,13 @@
                                    <div class="container_Investimentos">
                                        <div class="investimentos__inputs">
                                            <label for="">
-                                               <input name="data_transacao" type="text" placeholder="Data da TransaÃ§Ã£o">
+                                               <input name="data_transacao" type="text" placeholder="Data da Transação">
                                            </label>
                                        </div>
 
                                        <div class="investimentos__inputs">
                                            <label for="">
-                                               <input name="vl_aplicacao" type="text" placeholder="Valor da AplicaÃ§Ã£o">
+                                               <input name="vl_aplicacao" type="text" placeholder="Valor da Aplicação">
                                            </label>
                                        </div>
 
@@ -241,4 +238,3 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-</html>
