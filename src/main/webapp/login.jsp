@@ -34,8 +34,18 @@
                   </div>
                   <div class="senha">
                       <label for="senha"></label>
-                      <input name="senha" type="password" required maxlength="8" placeholder="*Senha">
+                      <input id="senha" name="senha" type="password" required maxlength="8" placeholder="*Senha">
                   </div>
+                  <div class="mostrar_Senha">
+                    <label class="switch">
+                        <span class="switch-text">Mostrar Senha</span>
+                        <div class="switch-wrapper">
+                            <input type="checkbox" id="watch" onclick="mostrarClick()"/>
+                            <span class="switch-button"></span>
+                        </div>
+                    </label>
+            
+                </div>
                   <a href="#" class="button-continue">
                       <button>Entrar
                       </button>  
@@ -55,4 +65,5 @@
         </section>
     </main>
 </body>
+<script src="./resources/js/login.js"></script>
 </html>

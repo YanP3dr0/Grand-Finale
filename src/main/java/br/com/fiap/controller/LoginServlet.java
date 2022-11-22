@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 
 import br.com.fiap.factory.DaoFactory;
 import br.com.fiap.fintech.dao.UsuarioDao;
+import br.com.fiap.model.Usuario;
 
 
 @WebServlet("/login")
@@ -38,13 +39,15 @@ public class LoginServlet extends HttpServlet {
 		
 		if(dao.validaUsuario(email, senha) == true) {
 			HttpSession session = request.getSession();
+			Usuario usuario = dao.buscaPorEmail(email);
+			session.setAttribute("userId", usuario.getCodigo());
 			session.setAttribute("user", email);
 			String msg = "Um login foi realizado";
 		}else {
 			request.setAttribute("erro", "Usuário e/ou senha inválidos");
 			request.getRequestDispatcher("login.jsp").forward(request, response);
 		}
-		request.getRequestDispatcher("testaBusca.jsp").forward(request, response);
+		request.getRequestDispatcher("home.jsp").forward(request, response);
 	}
 
 }

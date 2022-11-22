@@ -9,7 +9,7 @@ public class TesteListagemDespesa {
 	
 	public static void main(String[] args) {
 		DespesaDao dao = new DespesaDao();
-		List<Despesa> lista = dao.listarPorUsuario(25);
+		List<Despesa> lista = dao.listar();
 		for (Despesa despesa : lista) {
 			System.out.println(despesa.toString());
 		}

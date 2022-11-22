@@ -2,153 +2,302 @@
 
 * {
     font-family: 'Montserrat', sans-serif;
-    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
-    width: 100%;
+    background: #24252A;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas: 
+    "header header header"
+    "aside main main"
+    "footer footer footer";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto 100vh auto;
+}
+
+.o-main, .o-footer {
+    background: #24252A;
+    color: #FDFDFD;
+    }
+
+.o-header {
+    grid-area: header;
+}
+
+.o-aside {
+    grid-area: aside;
+}
+
+.o-main {
+    grid-area: main;
+}
+
+.o-footer {
+    grid-area: footer;
+    display: block;
+    position: static;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    max-height: 7rem;
+    background: linear-gradient(180deg, #5B48D5 100.54%, rgba(91, 72, 213, 0) 85.42%);
+    position: relative;
+}
+
+.logout{
+    position: absolute;
+}
+
+.logout img {
+    width: 1.2rem;
+}
+
+.logout__Text {
+    position: absolute;
+    margin-top: .2rem;
+    font-size: 1rem;
+}
+
+.logo {
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-flex;
+    padding: 0px 20px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+    color: #edf0f1;
+}
+
+.nav__links li a:hover {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+}
+
+
+.container__aside {
+    margin-left: 1rem;
     height: 100vh;
-    background-color: #5B48D4 ;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(180deg, #5B48D5 0%, rgba(91, 72, 213, 0) 100%);
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px #1d1b1b;
 }
 
-.container__header {
+.content__aside___titulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1.6rem;
+    color: #edf0f1;
+    font-weight: 700;
+}
+
+.content__aside {
+    color: #2e2e2e;
+}
+
+.content__aside__categorias {
+    margin-top: .2rem;
+}
+
+.content__aside___despesas, .content__aside___receitas, label {
+    font-family: 'Montserrat', sans-serif;
+    color: #edf0f1;
+    padding-top: 1.2rem;
+    font-size: .8rem;
+}
+
+.btn__despesas {
+   padding: 5px 10px;
+   box-shadow: 0 7px 5px 0px rgb(0 0 0 / 25%);
+   margin-top: 1rem;
+   margin-left: 2.5rem;
+   background: #673ef8;
+   border: 2px solid #202020;
+   color: rgb(253, 250, 250);
+   border-radius: 5px;
+   cursor: pointer;
+   transition: all 0.3s ease 0s;
+   font-size: .8rem;
+}
+
+.btn__despesas:hover {
+   background: #4f21f5;
+   font-weight: bold;
+} 
+
+.btn__excluir {
+    padding: 5px 23.5px;
+    box-shadow: 0 7px 5px 0px rgb(0 0 0 / 25%);
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+    margin-bottom: 1rem;
+    background: rgb(247, 236, 236);
+    border: 2px solid #202020;
+    color: rgb(26, 24, 24);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-size: .8rem;
+ }
+
+ .btn__excluir:hover {
+    background: rgb(252, 252, 252);
+    font-weight: bold;
+ } 
+
+ .btn__receitas {
+    padding: 5px 13px;
+    box-shadow: 0 7px 5px 0px rgb(0 0 0 / 25%);
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+    background: #673ef8;
+    border: 2px solid #202020;
+    color: rgb(253, 250, 250);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-size: .8rem;
+ }
+
+ .btn__receitas:hover {
+    background: #4f21f5;
+    font-weight: bold;
+ } 
+
+.container__aside img {
+    width: 1.25rem;
+}
+
+.valor_transacoes {
+   padding: .7rem 1rem;
+   margin-top: .2rem;
+   border: none;
+   border-radius: 5px;
+}
+
+.valor_transacoes:hover {
+    background-color: #f1f4f4e9
+}
+
+.valor_transacoes:focus-visible {
+    outline: 1.8px solid rgb(2, 25, 27);
+}
+
+
+.saldo_User {
+    width: 99%;
+    position: relative;
+    background: linear-gradient(180deg, #755ADF 0%, rgba(56, 84, 232, 0.394118) 99.85%, rgba(22, 18, 220, 0) 90.1%);
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px #1d1b1b;
+    height: 33vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 200px;
 }
 
-.container__main {
+.saldo_User:hover {
+    transition-timing-function: ease-out;
+    border: 1.2px solid wheat;
+}
+
+.boas__vindas {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+}
+
+.boas__vindas img {
+    width: 1.25rem;
+}
+
+.saldo {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    font-size: .95rem;
+    font-style: normal;
+
 }
 
-.box {
-    background-color: #d2ccf8 ;
-    border-radius: 45px;
-    box-shadow: 2px 3px 3px 5px rgba(43, 41, 41, 0.15);
-
-    display: inline-block;
-    width: 1024px;
-    height: 300px;
+.saldo_conta {
+    margin-top: .5rem;
+    background: transparent;
+    border: none;
+    color: #edf0f1;
     text-align: center;
+    font-weight: 900;
+    font-size: 1.1rem;
 }
 
-#chamada {
-    font-family: "MontSerrat", "sans-serif";
-    color: #1a1919;
-    font-weight: 800;
-    font-size: 32px;
-    padding-top: 40px;
+.teste {
+    margin-top: 1rem;
+    width: 99%;
+    height: 55vh;
+    background: linear-gradient(180deg, #5a4abf 0%, rgba(91, 72, 213, 0) 100%);
+    border-radius: 5px;
+    overflow-y: auto;
+    overflow-wrap: normal;
 }
 
-.pitch__1 {
-    padding-top: 40px;
-    font-family: "MontSerrat",
-     "sans-serif";
-    color: #2D2D2D;
-    font-weight: 500;
-    font-size: 20px;
-}
-
-.pitch__2 {
-    padding-top: 10px;
-    font-family: "MontSerrat",
-     "sans-serif";
-    color: #2D2D2D;
-    font-weight: 500;
-    font-size: 20px;
-}
-
-.buttons {
+.container_forms {
     display: flex;
-    justify-content: space-evenly;
-    padding-top: 50px;
-}
-
-.login__btn {
-    width: 280px;
-    height: 50px;
-
-    transition: all 0.3s ease 0s;
-    background: #5B48D4;
-    border-radius: 20px;
-    border: 2px solid #f7f7f7;
-    filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.25));
-    color: white;
-    cursor: pointer;
-
-    font-size: 16px;
-    font-weight: 500;
-    font-family: 'MontSerrat',
-    "sans-serif";
-}
-
-.login__btn:hover {
-    background-color: rgba(37, 0, 169, 0.8);
-    font-weight: bold;
-}
-
-.cadastrar__btn {
-    width: 280px;
-    height: 50px;
-    
-    transition: all 0.3s ease 0s;
-    background: #fffafabb;
-    border-radius: 20px;
-    border: 2px solid #5B48D4;
-    filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.25));
-    color: #5B48D4;
-    cursor: pointer;
-
-    font-size: 16px;
-    font-weight: 500;
-    font-family: 'MontSerrat',
-    "sans-serif";
-}
-
-.cadastrar__btn:hover {
-    background-color: rgb(255, 255, 255);
-    border: 2px solid #5B48D4;
-    font-weight: bold;
-}
-
-.rodape {
-    margin-top: 65px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    font-size: 13px;
-    font-weight: 300;
-    font-family: 'MontSerrat',
-    "sans-serif";
-    color: rgba(240, 255, 255, 0.644);
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-@media (max-width: 560px) {
-    
-    .box {
-      display: inline-block;
-      width: 100%;
-      height: auto;
-    }
-
-    .buttons {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .cadastrar__btn {
-        margin-top: 15px;
-    }
-
-
-    footer {
-        display: block;
-        height: auto;
-    }
+.cad__ContaBancaria___Titulo {
+    margin-top: .8rem;
+    font-weight: 700;
 }
+
+.form_Conta {
+    margin-top: .1rem;
+}
+
+.cad__Investimentos___Titulo {
+    margin-top: 1.2rem;
+    font-weight: 700;
+}
+
+.conta__inputs input{
+   padding: .35rem 1rem;
+   margin-top: .3rem;
+   border: none;
+   border-radius: 5px;
+}
+
+.investimentos__inputs input{
+    padding: .35rem 1rem;
+    margin-top: .3rem;
+    border: none;
+    border-radius: 5px;
+ }
+
+
+

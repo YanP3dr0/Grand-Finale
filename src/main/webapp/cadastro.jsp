@@ -13,25 +13,22 @@
 <body>
 
     <header>
-            <h1 class="logo"><img src="./resources/img/Smart_Money-removebg-preview.png" width="200px" alt="Logo da SmartMoney"></h1>
-        </div>
-        <nav>
-            <ul class="nav__links">
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">Conta</a>
-                </li>
-                <li>
-                    <a href="#">Sobre</a>
-                </li>
-            </ul>
-        </nav>
-        <a href="login.jsp" class="entrar__link">
-            <button class="login">Login</button>
-        </a>
-    </header>
+        <h1 class="logo"><a href="../index.html" rel="_previous" target="_parent"><img src="img/Smart_Money-removebg-preview.png" width="200px" alt="Logo da SmartMoney"></a></h1>
+    </div>
+    <nav>
+        <ul class="nav__links">
+            <li>
+                <a href="../assets/home.html">Home</a>
+            </li>
+            <li>
+                <a href="login.html">Login</a>
+            </li>
+            <li class="logout">
+                <a href=""><img src="img/Logout.svg" alt=""></img>  <span class="logout__Text">Logout</span></a>
+            </li>
+        </ul>
+    </nav>
+</header>
 
     <main>
         <c:if test="${not empty msg }">

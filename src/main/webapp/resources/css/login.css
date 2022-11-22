@@ -8,18 +8,23 @@
 
 body {
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: #5B48D4;
 }
 
 header {
-    max-height: 12.5rem;
+    max-height: 8.5rem;
 }
 
 .logo {
+    margin-top: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+img {
+    width: 250px;
 }
 
 .container {
@@ -29,7 +34,8 @@ header {
 }
 
 .content {
-    background-color: #fffffffb;
+    margin-top: 2.1rem;
+    background-color: #d2ccf8;
     width: 30rem;
     height: 20.5rem;
     display: flex;
@@ -39,12 +45,28 @@ header {
     border-radius:  20px;
 }
 
-.cpf input {
+.email input {
     margin-top: 1.5rem;
     border: none;
     border-radius: 5px;
     padding: 0.8rem 1.5rem;
     box-shadow: 1px 1px 6px #00001c;
+}
+
+.email input:focus-visible, .senha input:focus-visible {
+    outline: 1px solid #5B48D4;
+}
+
+
+.email input::placeholder, .senha input::placeholder {
+    padding-left: 0.1rem;
+    color: #000000be;
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+.email input:hover, .senha input:hover {
+    background-color: #f3f3f8fd;
 }
 
 .senha input {
@@ -55,32 +77,81 @@ header {
     box-shadow: 1px 1px 6px #00001c;
 }
 
-.cpf input:focus-visible, .senha input:focus-visible {
-    outline: 1px solid #5B48D4;
+.mostrar_Senha {
+    margin-top: 2rem;
 }
 
+.switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 
-.cpf input::placeholder, .senha input::placeholder {
-    padding-left: 0.1rem;
-    color: #000000be;
-    font-size: 0.8rem;
+.switch .switch-text.switch-text {
+    padding-right: 4.5rem;
+    font-size: 0.75rem;
     font-weight: 500;
+    color: rgb(48, 46, 48);
 }
 
-.cpf input:hover, .senha input:hover {
-    background-color: #f3f3f8fd;
+.switch .switch-wrapper {
+    display: inline-block;
+    width: 48px;
+    height: 29px;
+    position: relative;
+}
+
+.switch .switch-wrapper .switch-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    background-color: #b3afaf5d;
+
+}
+
+.switch .switch-wrapper input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch .switch-wrapper .switch-button::before {
+    content: "";
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    left: 4px;
+    bottom: 3px;
+    border-radius: 50%;
+    transition: 0.5s all ease;
+    background-color: #ffffff;
+}
+
+.switch .switch-wrapper input:checked + .switch-button{
+    background-color: #5B48D4;
+}
+
+.switch .switch-wrapper input:checked + .switch-button::before {
+    transform: translateX(19px);
 }
 
 button {
     margin-top: 1.4rem;
-    padding: 0.18rem 4.5rem;
+    padding: 0.2rem 4.5rem;
     background: #5B48D4;
     color: #edf0f1;
     border: 2px solid #5B48D4;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 button:hover {
@@ -93,11 +164,12 @@ button:active {
 }
 
 .esqueci_senha {
-    margin-top: 1.4rem;
+    margin-top: 1rem;
+    text-decoration: underline;
 }
 
 .esqueci_senha a {
-    color: hsla(241, 87%, 56%, 0.986);
+    color: #5B48D4;
     cursor: pointer;
     font-size: 0.8rem;
     font-weight: 800;
@@ -118,3 +190,34 @@ button:active {
     font-weight: 500;
 }
 
+@media (min-width: 1024px) and (max-width: 2560px) {
+
+    .biometria img, .descritivo{
+        display: none;
+    }
+}
+
+@media (max-width: 1020px) {
+
+    body {
+        width: auto;
+        height: auto;
+    }
+
+    header {
+        max-height: 3rem;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    .content {
+        width: 20rem;
+        height: 25rem;
+    }
+
+    .esqueci_senha {
+        margin-top: 1.5rem;
+    }
+}

@@ -11,13 +11,13 @@ public class TesteReceita {
 //		Receita receitaAtualiza = new Receita(5, "6000.98", 25, 6, "seila");
 //		dao.atualizar(receitaAtualiza);
 //		dao.remover(5);
+//		
+//		Receita receita = new Receita("2642.98", 25, 2, "porte");
+//		dao.cadastrar(receita);
+//		System.out.println("Cadastrado");
 		
-		Receita receita = new Receita("2642.98", 25, 2, "porte");
-		dao.cadastrar(receita);
-		System.out.println("Cadastrado");
 		
-		
-		List<Receita> lista = dao.listarPorUsuario(25);
+		List<Receita> lista = dao.listar();
 		for (Receita receitas : lista) {
 			System.out.println(receitas.toString());
 		}

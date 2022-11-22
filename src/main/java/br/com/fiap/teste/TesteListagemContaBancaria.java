@@ -9,7 +9,7 @@ public class TesteListagemContaBancaria {
 	
 	public static void main(String[] args) {
 		ContaBancariaDao dao = new ContaBancariaDao();
-		List<ContaBancaria> lista = dao.listarPorUsuario(25);
+		List<ContaBancaria> lista = dao.listarPorUsuario(29);
 		for (ContaBancaria contaBancaria : lista) {
 			System.out.println(contaBancaria.toString());
 		}		
