@@ -15,7 +15,6 @@
     <header class="o-header">
 
             <h1 class="logo"><a href="#" rel="_previous" target="_parent"><img src="./resources/img/Smart_Money-removebg-preview.png" width="200px" alt="Logo da SmartMoney"></a></h1>
-        </div>
         <nav>
             <ul class="nav__links">
                 <li>
@@ -34,11 +33,10 @@
                     <a href="investimento?&acao=consulta" rel="_next" target="_self">Investimentos</a>
                 </li>
                 <li class="logout">
-                    <a href=""><img src="./resources/img/Logout.svg" alt=""></img>  <span class="logout__Text">Logout</span></a>
+                    <a href="login"><img src="./resources/img/Logout.svg" alt=""></img>  <span class="logout__Text">Logout</span></a>
                 </li>
             </ul>
         </nav>
-        </div>
     </header>
     <aside class="o-aside">
         <c:if test="${not empty msg }">
@@ -57,53 +55,45 @@
                 <div class="content__aside__categorias">
                     <form action="despesa?acao=cadastrar" method="post">
                         <input type="hidden" value="${userId}" name="userId">
-                        <ul>
-                            <div class="content__aside___despesas">
-                                <li>
-                                    <!-- <img src="img/alimentacao.svg" alt="">
-                                   <label for="txt_food__d">Alimentaï¿½ï¿½o
-                                </label> -->
-                                <label for=""></label>
-                                <label for=""></label>
-                                <div><input name="descricao" type="text" class="valor_transacoes" id="" placeholder="Descrição" ></div>
-                                </li>
-                            </div>
-                            <div class="content__aside___despesas">
-                                <li>
-                                    <div><input name="valor" type="text" class="valor_transacoes" onkeypress="$(this).mask('R$ #.##0.##0,00', {reverse: true});" placeholder="Valor: R$"></div>
-                                </li>
-                            </div>
-                            <div class="content__aside___btn">
-                                <a href="#"><button class="btn__despesas">Criar Despesa</button></a>
-                            </div>
-                    </form>
+                      <ul>
+	                            <div class="content__aside___despesas">
+	                                <li>
+	                                    <!-- <img src="img/alimentacao.svg" alt="">
+	                                   <label for="txt_food__d">Alimentaï¿½ï¿½o
+	                                </label> -->
+	                                <label for=""></label>
+	                                <label for=""></label>
+	                                <div><input name="descricao" type="text" class="valor_transacoes" id="" placeholder="Descrição" ></div>
+	                                </li>
+	                            </div>
+	                            <div class="content__aside___despesas">
+	                                <li>
+	                                    <div><input name="valor" type="text" class="valor_transacoes" onkeypress="$(this).mask('R$ #.##0.##0,00', {reverse: true});" placeholder="Valor: R$"></div>
+	                                </li>
+	                            </div>
+	                            <div class="content__aside___btn">
+	                                <a href="#"><button class="btn__despesas">Criar Despesa</button></a>
+	                            </div>
+	                    </form>
+	
+	                    <form action="receita?acao=cadastrar" method="post">
+	                        <input type="hidden" value="${userId}" name="userId">
+	                        <div class="content__aside___despesas">
+	                            <li>
+	                                <div><input name="descricao" type="text" class="valor_transacoes"  placeholder="Descrição" ></div>
+	                            </li>
+	                        </div>
+	                        <div class="content__aside___receitas">
+	                            <li>
+	                                <div><input name="valor" type="text" class="valor_transacoes" onkeypress="$(this).mask('R$ #.##0.##0,00', {reverse: true});"placeholder="Valor: R$"></div>
+	                            </li>
+	                        </div>
+	                        <div class="content__aside___btn">
+	                            <a href="#"><button class="btn__receitas">Criar Receita</button></a>
+	                        </div>
+	                    </form>
 
-                    <div class="content__aside___btn___VerTodos">
-                        <a href="despesa?&acao=consulta" rel="_next" target="_self"><button class="btn__excluir">Ver Todos</button></a>
-                    </div>
-
-                    <form action="receita?acao=cadastrar" method="post">
-                        <input type="hidden" value="${userId}" name="userId">
-                        <div class="content__aside___despesas">
-                            <li>
-                                <div><input name="descricao" type="text" class="valor_transacoes"  placeholder="Descrição" ></div>
-                            </li>
-                        </div>
-                        <div class="content__aside___receitas">
-                            <li>
-                                <div><input name="valor" type="text" class="valor_transacoes" onkeypress="$(this).mask('R$ #.##0.##0,00', {reverse: true});"placeholder="Valor: R$"></div>
-                            </li>
-                        </div>
-                        <div class="content__aside___btn">
-                            <a href="#"><button class="btn__receitas">Criar Receita</button></a>
-                        </div>
-                    </form>
-
-                        <div class="content__aside___btn___VerTodos">
-                            <a href=""><button class="btn__excluir">Ver Todos</button></a>
-                        </div>
-
-                    </ul>
+                      </ul>
                 </div>
                 
     </aside>
@@ -165,10 +155,6 @@
 
                                 </div>
                             </form>
-
-                                    <div class="content__aside___btn___VerTodos">
-                                        <a href="#"><button class="btn__excluir">Ver Mais</button></a>
-                                    </div>  
                         </div>
 
                         <div class="o-Investimentos">
@@ -182,7 +168,7 @@
                                    <div class="container_Investimentos">
                                        <div class="investimentos__inputs">
                                            <label for="">
-                                               <input name="data_transacao" type="text" placeholder="Data da Transação">
+                                           	  <input name="data_transacao" type="text" placeholder="Data da Transação" onkeypress="$(this).mask('00/00/0000')">
                                            </label>
                                        </div>
 
@@ -222,12 +208,6 @@
 
                                     </div>
                                 </form>
-
-                                        <div class="content__aside___btn___VerTodos">
-                                            <button class="btn__excluir">
-                                                <a href="">Ver Mais</a>
-                                            </button>
-                                        </div>  
                             </div>
                         </div>
                     </div>

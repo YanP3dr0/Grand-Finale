@@ -16,16 +16,15 @@ public class InvestimentoDao {
 
 	private Connection conexao;
 
-	public void cadastrar(Investimento investimento) {
+	public void cadastrar(Investimento investimento) throws SQLException {
 
 		PreparedStatement stmt = null;
 
-		try {
 			conexao = ConnectionManager.getInstance().getConnection();
 			String query = "INSERT INTO T_SIP_INVESTIMENTO(CD_INVESTIMENTO, CD_USUARIO, DT_TRANSACAO, VL_APLICACAO, VL_RESGATE, VL_RENDIMENTO, VL_IR, VL_IOF) VALUES (SEQ_CD_INVESTIMENTO.NEXTVAL, ?, ?, ?, ?, ?, ?, ?)";
 			stmt = conexao.prepareStatement(query);
 			stmt.setInt(1, investimento.getCodigoUsuario());
-			Date data = new Date(investimento.getDataTransacao().getTimeInMillis());
+			Date data = new Date(investimento.getDataTransacaoCalendar().getTimeInMillis());
 			stmt.setDate(2, data);
 			stmt.setDouble(3, investimento.getValorAplicacao());
 			stmt.setDouble(4, investimento.getValorResgaste());
@@ -33,16 +32,12 @@ public class InvestimentoDao {
 			stmt.setDouble(6, investimento.getValorIR());
 			stmt.setDouble(7, investimento.getValorIOF());
 			stmt.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
 			try {
 				stmt.close();
 				conexao.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-		}
 	}
 	
 	public void atualizar(Investimento investimento) {
@@ -53,7 +48,7 @@ public class InvestimentoDao {
 			conexao = ConnectionManager.getInstance().getConnection();
 			String query = "UPDATE T_SIP_INVESTIMENTO SET DT_TRANSACAO = ?, VL_APLICACAO = ?, VL_RESGATE = ?, VL_RENDIMENTO = ?, VL_IR = ?, VL_IOF = ? WHERE CD_INVESTIMENTO = ?";
 			stmt = conexao.prepareStatement(query);
-			Date data = new Date(investimento.getDataTransacao().getTimeInMillis());
+			Date data = new Date(investimento.getDataTransacaoCalendar().getTimeInMillis());
 			stmt.setDate(1, data);
 			stmt.setDouble(2, investimento.getValorAplicacao());
 			stmt.setDouble(3, investimento.getValorResgaste());

@@ -14,7 +14,6 @@ import javax.servlet.http.HttpSession;
 
 import br.com.fiap.factory.DaoFactory;
 import br.com.fiap.fintech.dao.InvestimentoDao;
-import br.com.fiap.model.ContaBancaria;
 import br.com.fiap.model.Investimento;
 
 

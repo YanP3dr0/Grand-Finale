@@ -13,22 +13,18 @@
 <body>
 
     <header>
-        <h1 class="logo"><a href="../index.html" rel="_previous" target="_parent"><img src="img/Smart_Money-removebg-preview.png" width="200px" alt="Logo da SmartMoney"></a></h1>
-    </div>
-    <nav>
-        <ul class="nav__links">
-            <li>
-                <a href="../assets/home.html">Home</a>
-            </li>
-            <li>
-                <a href="login.html">Login</a>
-            </li>
-            <li class="logout">
-                <a href=""><img src="img/Logout.svg" alt=""></img>  <span class="logout__Text">Logout</span></a>
-            </li>
-        </ul>
-    </nav>
-</header>
+            <h1 class="logo"><a href="index.jsp" rel="_previous" target="_parent"><img src="./resources/img/Smart_Money-removebg-preview.png" width="200px" alt="Logo da SmartMoney"></a></h1>
+        <nav>
+            <ul class="nav__links">
+                <li>
+                    <a href="home.jsp">Home</a>
+                </li>
+                <li>
+                    <a href="login.jsp">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
         <c:if test="${not empty msg }">
@@ -101,7 +97,7 @@
 
                             <div class="gender-input">
                                 <input type="radio" name="gender" id="notPrefer" value="Prefiro nï¿½o dizer">
-                                <label for="notPrefer">Prefiro nï¿½o dizer</label>
+                                <label for="notPrefer">Prefiro não dizer</label>
                             </div>
 
                         </div>
@@ -114,6 +110,6 @@
             </div>
         </section>
     </main>
-  <%@ include file="footer.jsp" %>
 </body>
+<script src="./resources/js/cadastro.js"></script>
 </html>

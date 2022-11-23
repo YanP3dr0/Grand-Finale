@@ -19,7 +19,7 @@
                 <a href="investimento?&acao=consulta" rel="_next" target="_self">Investimentos</a>
             </li>
             <li class="logout">
-                <a href=""><img src="resources/img/Logout.svg" alt=""></img>
+                <a href="login"><img src="resources/img/Logout.svg" alt=""></img>
                 <span class="logout__Text">Logout</span></a>
             </li>
         </ul>

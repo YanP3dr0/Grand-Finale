@@ -4,12 +4,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="ISO-8859-1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartMoney - Seja um de Nossos Clientes</title>
     <%@ include file="header.jsp" %>
-    <link rel="stylesheet" href="./resources/css/home.css">
+    <link rel="stylesheet" href="./resources/css/index.css">
 </head>
 <body>
     <header>
@@ -21,8 +21,8 @@
        <section class="box">
            <section class="texts">
             <h2><p id="chamada">Bem-vindo ao SmartMoney!</p></h2>
-            <p class="pitch__1">Queremos te ajudar nas suas finan√ßas!</p>
-            <p class="pitch__2">Caso j√° tenha uma conta, clique em <strong>Entrar</strong>, sen√£o, clique em <strong>Criar Conta</strong></p>
+            <p class="pitch__1">Queremos te ajudar nas suas finanÁas!</p>
+            <p class="pitch__2">Caso j· tenha uma conta, clique em <strong>Entrar</strong>, sen„o, clique em <strong>Criar Conta</strong></p>
            </section>
            <section class="buttons">
             <a href="login.jsp" rel="_next" target="_self"><input type="button" class="login__btn" value="Entrar"></a>

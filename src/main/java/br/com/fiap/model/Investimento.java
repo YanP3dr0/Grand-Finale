@@ -1,8 +1,6 @@
 package br.com.fiap.model;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 
 public class Investimento {
 	
@@ -63,7 +61,11 @@ public class Investimento {
 	}
 
 	public String getDataTransacao() {
-		return dataTransacao.getTime().toLocaleString();
+		return this.dataTransacao.getTime().toLocaleString();
+	}
+	
+	public Calendar getDataTransacaoCalendar() {
+		return this.dataTransacao;
 	}
 
 	public void setDataTransacao(Calendar dataTransacao) {
