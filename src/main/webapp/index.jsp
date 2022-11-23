@@ -28,7 +28,7 @@
             <a href="login.jsp" rel="_next" target="_self"><input type="button" class="login__btn" value="Entrar"></a>
             <a href="cadastro.jsp" rel="_next" target="_self"><input class="cadastrar__btn" type="button" value="Criar Conta"></a>
            </section>
-       </section> 
+       </section>
     </main>
     <footer class="rodape">
         <p>&copy; SmartMoney | Todos os Direitos Reservados - 2022</p>
